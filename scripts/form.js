@@ -1,3 +1,29 @@
-$('input:first').focus();
 $('#name-input').attr('disabled', true).addClass('disable')
-// TODO: input 焦点时添加 class="foucs" 改变样式为黄色背景
+
+var defaultText = 'Search'
+
+$('input').on('focus', function(){
+    $(this).addClass('highlight')
+    if ($(this).val() == defaultText) {
+        $(this).val('').removeClass('default');
+    };
+}).on('blur', function(){
+    $(this).removeClass('highlight')
+    if ($(this).val() == '') {
+        $(this).val(defaultText).addClass('default');
+    }
+})
+
+$('input:first').focus();
+
+$('#status').on('keydown', function(event){
+    var maxNum = 140;
+    var inputText = $(this).val();
+    var numChar = inputText.length;
+    var charRemain = maxNum - numChar;
+    if (numChar <= maxNum){
+        $('#counter span').text(charRemain);
+    } else if(numChar > maxNum){
+        event.preventDefault();
+    }
+})

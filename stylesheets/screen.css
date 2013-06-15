@@ -68,6 +68,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 1, ../sass/_form.sass */
+p {
+  margin: 10px 0;
+}
+
+/* line 3, ../sass/_form.sass */
+input {
+  padding: 5px;
+}
+
+/* line 5, ../sass/_form.sass */
+input.default {
+  color: #828282;
+}
+
+/* line 8, ../sass/_form.sass */
 .disable {
   background: #dfdfdf;
+}
+
+/* line 11, ../sass/_form.sass */
+.highlight {
+  background: yellow;
+  padding: 5px;
 }
