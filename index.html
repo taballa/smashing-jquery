@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <title>使用jQuery制作高级的表单</title>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <!--[if IE]>
+        <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
 </head>
 <body>
     <p>让第一个输入框自动得到焦点(focus)</p>
-    <input type="text"><input type="text">
-
-    <script>
-        $('input:first').focus();
-    </script>
+    <input type="text">
+    <input type="text" id="name-input">
+    <input type="text">
+<script src="scripts/form.js"></script>
 </body>
 </html>
