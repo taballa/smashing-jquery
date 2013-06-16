@@ -11,11 +11,6 @@
         <option value="no">no</option>
     </select>
     <div id="show"></div>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script>
-        $('select').on('change', function(){
-            $('#show').text($(this).val());
-        })
-    </script>
+    <script src="components/requirejs/require.js" data-main="scripts/main"></script>
 </body>
 </html>
