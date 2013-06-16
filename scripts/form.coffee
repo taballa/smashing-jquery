@@ -17,12 +17,18 @@ $("#status").on( "keydown", (event) ->
     numChar = inputText.length
     charRemain = maxNum - numChar
     if numChar <= maxNum
+        $("#counter strong").text "剩余"
         $("#counter span").text charRemain
-    else event.preventDefault()  if numChar > maxNum
+    if numChar > maxNum
+        $("#counter strong").text "超过"
+        $("#counter span").text charRemain/-1
 ).on "keyup", (event) ->
     inputText = $(this).val()
     numChar = inputText.length
     charRemain = maxNum - numChar
     if numChar <= maxNum
+        $("#counter strong").text "剩余"
         $("#counter span").text charRemain
-    else event.preventDefault()  if numChar > maxNum
+    if numChar > maxNum
+        $("#counter strong").text "超过"
+        $("#counter span").text charRemain/-1
