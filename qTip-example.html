@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>qTip example</title>
+</head>
+<body>
+    <input type="text" id="email" title="Please enter your email address.">
+    <script src="scripts/vendor/requirejs/require.js"></script>
+    <script>
+        require(['scripts/common'], function(main){
+            require(['example']);
+        } )
+    </script>
+</body>
+</html>
