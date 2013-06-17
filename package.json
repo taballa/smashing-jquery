@@ -1,0 +1,30 @@
+{
+  "name": "smashing-jquery",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/taballa/smashing-jquery"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "5693820f68c3b47365a5c1e3342da5b99927d24b",
+  "bugs": {
+    "url": "https://github.com/taballa/smashing-jquery/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-compass": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.4.1",
+    "grunt-contrib-clean": "0.4.0",
+    "grunt-contrib-livereload": "0.1.1",
+    "grunt-bower-hooks": "~0.2.0",
+    "grunt-usemin": "~0.1.9",
+    "grunt-requirejs": "~0.3.2"
+  }
+}
