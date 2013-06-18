@@ -12,6 +12,7 @@
     "requirejs": "~2.1.6",
     "qtip2": "~2.0.1",
     "qTip": "~1.0.0",
-    "jquery-migrate": "~1.2.0"
+    "jquery-migrate": "~1.2.0",
+    "jquery-validation": "https://github.com/jzaefferer/jquery-validation.git#~1.11.1"
   }
 }
