@@ -9,6 +9,9 @@
   ],
   "dependencies": {
     "jquery": "~1.9.1",
-    "requirejs": "~2.1.6"
+    "requirejs": "~2.1.6",
+    "qtip2": "~2.0.1",
+    "qTip": "~1.0.0",
+    "jquery-migrate": "~1.2.0"
   }
 }
