@@ -83,16 +83,16 @@ input.default {
 }
 
 /* line 13, ../sass/_form.sass */
-#form-example input {
+#form-example input, #form-example-2 input {
   display: block;
 }
 /* line 15, ../sass/_form.sass */
-#form-example label {
+#form-example label, #form-example-2 label {
   display: block;
   margin-top: 10px;
 }
 /* line 18, ../sass/_form.sass */
-#form-example .submit {
+#form-example .submit, #form-example-2 .submit {
   margin-top: 10px;
 }
 
@@ -105,6 +105,12 @@ input.default {
 .highlight {
   background: yellow;
   padding: 5px;
+}
+
+/* line 29, ../sass/_form.sass */
+.left-box, .right-box {
+  width: 400px;
+  float: left;
 }
 
 /* line 1, ../sass/_layout.sass */

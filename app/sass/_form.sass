@@ -6,14 +6,14 @@ input.default
     color: #828282
 
 // form the example
-@mixin block
-    display: block
+@mixin momomo
+    display: block 
 $space : 10px
-#form-example
+#form-example, #form-example-2
     input
-        @include block
+        display: block
     label
-        @include block
+        display: block
         margin-top: $space
     .submit
         margin-top: $space
@@ -26,4 +26,6 @@ $space : 10px
     background: yellow
     padding: 5px
 
-
+.left-box, .right-box
+    width: 400px
+    float: left

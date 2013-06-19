@@ -8,15 +8,32 @@
 <body>
 <div id="wrap">
     <h3>Validate form</h3>
-    <form action="" method="post" id="form-example">
-        <label for="name">name</label>
-        <input type="text" id="name">
-        <label for="email">email</label>
-        <input type="text" id="email">
-        <label for="message">message</label>
-        <input type="text" id="message">
-        <input type="submit" value="Submit" class="submit">
-    </form>
+    <div class="left-box">
+        <form action="" method="post" id="form-example">
+            <label for="name">name</label>
+                <input type="text" id="name" class="required">
+            <label for="email">email</label>
+                <input type="text" id="email" class="required email">
+            <label for="phone">phone</label>
+                <input type="text" id="phone" class="required digits">
+            <label for="message">message</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="required"></textarea>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+    <div class="right-box">
+        <form action="" method="post" id="form-example-2">
+            <label for="name">name</label>
+                <input type="text" id="name" name="name">
+            <label for="email">email</label>
+                <input type="text" id="email" name="email">
+            <label for="phone">phone</label>
+                <input type="text" id="phone" name="phone">
+            <label for="message">message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
 </div>
     <script src="scripts/vendor/requirejs/require.js"></script>
     <script>
