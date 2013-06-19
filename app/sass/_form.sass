@@ -5,6 +5,20 @@ input
 input.default
     color: #828282
 
+// form the example
+@mixin block
+    display: block
+$space : 10px
+#form-example
+    input
+        @include block
+    label
+        @include block
+        margin-top: $space
+    .submit
+        margin-top: $space
+    
+
 .disable
     background: #DFDFDF
 
