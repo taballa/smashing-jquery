@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Validate form</title>
+    <link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 <body>
+<div id="wrap">
     <h3>Validate form</h3>
-    
+    <form action="" method="post" id="form-example">
+        <label for="name">name</label>
+        <input type="text" id="name">
+        <label for="email">email</label>
+        <input type="text" id="email">
+        <label for="message">message</label>
+        <input type="text" id="message">
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</div>
+    <script src="scripts/vendor/requirejs/require.js"></script>
+    <script>
+        require(['scripts/common'], function(){
+            require(['validate-example'])
+        })
+    </script>
 </body>
 </html>
