@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax example</title>
+    <link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+    <div id="wrap">
+        <h3>Ajax example</h3>
+        <div id="content"></div>
+        <div id="error"></div>
+        <div id="loading"></div>
+    </div>
+
+    <script src="scripts/vendor/requirejs/require.js"></script>
+    <script>
+        require(['scripts/common'], function(){
+            require(['ajax'])
+        })
+    </script>
+</body>
+</html>
