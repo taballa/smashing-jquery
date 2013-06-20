@@ -7,3 +7,7 @@ define (require)->
         numTotal = i + 1
         $('.container').append "<p>There are " + numTotal + " tickets available</p>"
         i++
+
+# test the alias
+    wow = require('jquery')
+    wow('.container').before('<h3>wow</h3>')
