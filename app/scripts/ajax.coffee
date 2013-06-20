@@ -10,6 +10,16 @@ define (require)->
         else
             # nothing
 
+    # TODO : test $.ajax
+    $ ->
+        $.ajax(
+            type: 'POST'
+            url: 'ajax-content.html'
+            ).fail $('#error').html('#error-2 has been an error, please try again later.')
+            # Old Way
+            # sueccess: ''
+            # error: $('#error').html('#error-2 has been an error, please try again later.')
+
     # loading image
-    $('#loading').html('<img src="images/loading.gif" alt="loading...">').
+    $('#loading').html('<img src="images/loading.gif" alt="loading...">')
 

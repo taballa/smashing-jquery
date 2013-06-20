@@ -11,6 +11,12 @@
 
       }
     }));
+    $(function() {
+      return $.ajax({
+        type: 'POST',
+        url: 'ajax-content.html'
+      }).fail($('#error').html('#error-2 has been an error, please try again later.'));
+    });
     return $('#loading').html('<img src="images/loading.gif" alt="loading...">');
   });
 
