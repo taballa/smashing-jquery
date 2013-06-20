@@ -12,7 +12,7 @@
       i++;
     }
     wow = require('jquery');
-    return wow('.container').before('<h3>wow</h3>');
+    return wow('.container').before('<h3>wow</h3>').css('border', '1px solid #F81F60');
   });
 
 }).call(this);
