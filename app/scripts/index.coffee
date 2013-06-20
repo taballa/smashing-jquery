@@ -10,4 +10,4 @@ define (require)->
 
 # test the alias
     wow = require('jquery')
-    wow('.container').before('<h3>wow</h3>')
+    wow('.container').before('<h3>wow</h3>').css('border', '1px solid #F81F60')
