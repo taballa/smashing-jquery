@@ -12,7 +12,11 @@
       i++;
     }
     wow = require('jquery');
-    return wow('.container').before('<h3>wow</h3>').css('border', '1px solid #F81F60');
+    return wow('.container').before('<h3>wow of before</h3>').prepend('<h3>wow of prepend</h3>').css({
+      'border': '1px solid #F81F60',
+      'width': '680px',
+      'margin': '0 auto'
+    });
   });
 
 }).call(this);
