@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -119,7 +119,26 @@ input.default {
   width: 960px;
 }
 
+/* line 1, ../sass/_table.sass */
+table {
+  color: #555555;
+}
 /* line 3, ../sass/_table.sass */
+table .even {
+  background-color: #e5f1f4;
+}
+/* line 5, ../sass/_table.sass */
+table .odd {
+  background-color: #f8fbfc;
+}
+/* line 8, ../sass/_table.sass */
+table tr th {
+  text-align: center;
+  background: #328aa4;
+  color: #f8fbfc;
+}
+/* line 12, ../sass/_table.sass */
 table tr td {
-  padding: 3px 15px;
+  padding: 5px 35px;
+  border-right: 2px solid #e5f1f4;
 }
