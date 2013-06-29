@@ -1,4 +1,48 @@
+// NOTE: Color schemes 1
+// table
+//     color: #555555
+//     .even
+//         background-color: #E5F1F4
+//     .odd
+//         background-color: #F8FBFC
+//     tr
+//         th
+//             text-align: center
+//             background: #328AA4
+//             color: #F8FBFC
+//         td
+//             padding: 5px 35px
+//             border-right: 2px solid #E5F1F4
+
+// NOTE: Color schemes 2
+.overview
+    width: 90%
+    margin: 1em auto
+.even
+    background-color: #FFF
+// .odd
+//     background-color: #FFF
+$cell-width: 1em
 table
+    font-size: 12px
+    font-family: "Trebuchet MS",​Verdana,​Arial,​Helvetica,​sans-serif
+    line-height: 1.6em
+    color: #6680A0
+    caption
+        text-align: center
+        line-height: 3em
     tr
-        td
-            padding: 3px 15px
+        background-color: #F7FBFF
+        th, td
+            text-align: center
+            border: 1px solid #E5EFF8
+            padding: 0.3em $cell-width
+    thead th, tfoot th
+        font-weight: bold
+        font-size: 14px
+        line-height: 2em
+        color: #65A3D2
+        padding: 10px $cell-width
+    tbody th
+        text-align: left
+
