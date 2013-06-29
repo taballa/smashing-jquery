@@ -9,6 +9,7 @@
     <h3>test livereload 205</h3>
     <div id="container">
         <table  class="overview">
+            <caption>Company X webhosting products overview</caption>
             <thead>
                 <tr>
                     <td></td>

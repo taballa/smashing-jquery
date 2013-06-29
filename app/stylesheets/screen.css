@@ -144,16 +144,21 @@ table {
   color: #6680a0;
 }
 /* line 31, ../sass/_table.sass */
+table caption {
+  text-align: center;
+  line-height: 3em;
+}
+/* line 34, ../sass/_table.sass */
 table tr {
   background-color: #f7fbff;
 }
-/* line 33, ../sass/_table.sass */
+/* line 36, ../sass/_table.sass */
 table tr th, table tr td {
   text-align: center;
   border: 1px solid #e5eff8;
   padding: 0.3em 1em;
 }
-/* line 37, ../sass/_table.sass */
+/* line 40, ../sass/_table.sass */
 table thead th, table tfoot th {
   font-weight: bold;
   font-size: 14px;
@@ -161,7 +166,7 @@ table thead th, table tfoot th {
   color: #65a3d2;
   padding: 10px 1em;
 }
-/* line 43, ../sass/_table.sass */
+/* line 46, ../sass/_table.sass */
 table tbody th {
   text-align: left;
 }
