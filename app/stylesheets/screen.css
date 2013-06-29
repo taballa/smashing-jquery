@@ -1,3 +1,4 @@
+@charset "GBK";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -119,26 +120,48 @@ input.default {
   width: 960px;
 }
 
-/* line 1, ../sass/_table.sass */
+/* line 5, ../sass/_layout.sass */
+#container {
+  margin: 0 auto;
+}
+
+/* line 18, ../sass/_table.sass */
+.overview {
+  width: 90%;
+  margin: 1em auto;
+}
+
+/* line 21, ../sass/_table.sass */
+.even {
+  background-color: white;
+}
+
+/* line 26, ../sass/_table.sass */
 table {
-  color: #555555;
+  font-size: 12px;
+  font-family: "Trebuchet MS", ​Verdana, ​Arial, ​Helvetica, ​sans-serif;
+  line-height: 1.6em;
+  color: #6680a0;
 }
-/* line 3, ../sass/_table.sass */
-table .even {
-  background-color: #e5f1f4;
+/* line 31, ../sass/_table.sass */
+table tr {
+  background-color: #f7fbff;
 }
-/* line 5, ../sass/_table.sass */
-table .odd {
-  background-color: #f8fbfc;
-}
-/* line 8, ../sass/_table.sass */
-table tr th {
+/* line 33, ../sass/_table.sass */
+table tr th, table tr td {
   text-align: center;
-  background: #328aa4;
-  color: #f8fbfc;
+  border: 1px solid #e5eff8;
+  padding: 0.3em 1em;
 }
-/* line 12, ../sass/_table.sass */
-table tr td {
-  padding: 5px 35px;
-  border-right: 2px solid #e5f1f4;
+/* line 37, ../sass/_table.sass */
+table thead th, table tfoot th {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 2em;
+  color: #65a3d2;
+  padding: 10px 1em;
+}
+/* line 43, ../sass/_table.sass */
+table tbody th {
+  text-align: left;
 }

@@ -4,7 +4,7 @@
     var $, color;
     $ = require('jquery');
     color = '';
-    $('tr:gt(0)').on('mouseover', function() {
+    $('tbody tr').on('mouseover', function() {
       color = $(this).css('background-color');
       return $(this).css({
         'background': '#ECFBD4'
@@ -14,8 +14,8 @@
         'background': color
       });
     });
-    $('tr:even').addClass('even');
-    return $('tr:odd').addClass('odd');
+    $('tbody tr:even').addClass('even');
+    return $('tbody tr:odd').addClass('odd');
   });
 
 }).call(this);
