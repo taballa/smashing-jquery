@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>jQuery filter</title>
     <link rel="stylesheet" href="stylesheets/screen.css">
+    <!--[if IE]>
+        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h3>test livereload 205</h3>
+    <h3>livereload test 219</h3>
     <div id="container">
         <table  class="overview">
             <caption>Company X webhosting products overview</caption>
@@ -35,36 +39,24 @@
                 </tr>
             </tfoot>
             <tbody>
-                <tr>
-                    <th>table body</th>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                </tr>
-                <tr>
-                    <th>table body</th>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                </tr>
-                <tr>
-                    <th>table body</th>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                    <td>1234</td>
-                </tr>
+                <!-- TODO: Use the PHP output cell again and again -->
+                <?php 
+                for ($i=0; $i<15; $i++)
+                {
+                    echo "
+                        <tr>
+                            <th>table body head</th>
+                            <td>$i</td>
+                            <td>$i</td>
+                            <td>$i</td>
+                            <td>$i</td>
+                            <td>$i</td>
+                            <td>$i</td>
+                            <td>$i</td>
+                        </tr>
+                    ";
+                }
+                ?>
             </tbody>
         </table>
     </div>
