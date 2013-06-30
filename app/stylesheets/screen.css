@@ -125,6 +125,11 @@ input.default {
   margin: 0 auto;
 }
 
+/* line 8, ../sass/_layout.sass */
+body {
+  background-color: white;
+}
+
 /* line 18, ../sass/_table.sass */
 .overview {
   width: 90%;
