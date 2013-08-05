@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/taballa/tablestyle.git
+  revision: 5e33b8bd56d7d2236e4a5092321d25d63e1a137b
+  branch: master
+  specs:
+    tablestyle (0.0.3)
+
 GEM
   remote: http://ruby.taobao.org/
   specs:
@@ -9,6 +16,8 @@ GEM
     compass-960-plugin (0.10.4)
       compass (>= 0.10.0)
     fssm (0.2.10)
+    normalize-scss (2.1.2)
+      sass (>= 3.2)
     sass (3.2.9)
 
 PLATFORMS
@@ -16,3 +25,5 @@ PLATFORMS
 
 DEPENDENCIES
   compass-960-plugin (~> 0.10.4)
+  normalize-scss (= 2.1.2)
+  tablestyle!
