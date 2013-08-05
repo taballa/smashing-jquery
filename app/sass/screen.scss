@@ -3,7 +3,10 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+// @import "compass/reset";
+$legacy-support-for-ie6 : true;
+@import "normalize";
+
 @import "form";
 @import "layout";
 @import "table";
