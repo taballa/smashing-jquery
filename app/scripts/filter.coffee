@@ -17,3 +17,5 @@ define (require) ->
 # NOTE: Use the class and css contorl the table color
     $('tbody tr:even').addClass('even')
     $('tbody tr:odd').addClass('odd')
+
+# TODO: 数字标题栏浮动
