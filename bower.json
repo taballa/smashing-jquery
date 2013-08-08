@@ -8,11 +8,12 @@
     "components"
   ],
   "dependencies": {
-    "jquery": "~1.9.1",
-    "requirejs": "~2.1.6",
-    "qtip2": "~2.0.1",
     "qTip": "~1.0.0",
+    "jquery": "~1.9.1",
     "jquery-migrate": "~1.2.0",
-    "jquery-validation": "https://github.com/jzaefferer/jquery-validation.git#~1.11.1"
+    "jquery-validation": "~1.11.1",
+    "qtip2": "~2.0.1",
+    "requirejs": "~2.1.6",
+    "google-code-prettify": "~1.0.0"
   }
 }
