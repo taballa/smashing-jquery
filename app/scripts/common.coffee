@@ -17,9 +17,3 @@ require.config
       '*': {
         'css': 'vendor/require-css/css'
       }
-
-加个中文看看
-加个中文看看
-加个中文看看
-加个中文看看
-加个中文看看
