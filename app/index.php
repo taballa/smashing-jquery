@@ -36,7 +36,5 @@
             require(['index']);
         })
     </script>
-
 </body>
-
 </html>
