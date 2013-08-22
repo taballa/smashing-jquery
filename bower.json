@@ -14,6 +14,9 @@
     "jquery-validation": "~1.11.1",
     "qtip2": "~2.0.1",
     "requirejs": "~2.1.6",
-    "google-code-prettify": "~1.0.0"
+    "google-code-prettify": "~1.0.0",
+    "require-css": "~0.0.7",
+    "modernizr": "~2.6.2",
+    "html5shiv": "~3.6.2"
   }
 }
