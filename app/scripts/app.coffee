@@ -1,1 +1,1 @@
-require(['drop-down-menu'])
+require(['drop-down-menu', 'accordion'])

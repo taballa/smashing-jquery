@@ -28,6 +28,7 @@
             <dd><a href="open_in_new_window.php">Open in new window</a></dd>
             <dd><a href="highlight_current_menu.php">对比路径，高亮显示菜单项</a></dd>
             <dd><a href="drop-down-menu.php">Drop down menu （下拉菜单）</a></dd>
+            <dd><a href="accordion_form.php">Accordion From</a></dd>
         </dl>
     </div>
     <script src="scripts/vendor/requirejs/require.js"></script>
