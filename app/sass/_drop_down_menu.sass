@@ -1,0 +1,61 @@
+.container
+    width: 950px
+    margin: 10px auto
+    font: 14px Helvetica, sans-serif
+
+p
+    margin: 10px
+
+#navigation
+    list-style-type: none
+    background: #CE0100
+    height: 63px
+    font-size: 24px
+    margin: 0
+
+    li
+        float: left
+        width: 175px
+        text-align: center
+        position: relative
+        padding: 20px 0 10px
+
+    a.active
+        border: 1px solid blue
+
+    ul.subnav
+        background: #E7F1D2
+        width: 175px
+        clear: both
+        display: none
+        position: absolute
+        top: 63px
+        @include border-corner-radius("bottom", "left", 8px)
+        @include border-corner-radius("bottom", "right", 8px)
+        border-left: 2px solid #998
+        border-right: 2px solid #998
+        border-bottom: 2px solid #998
+        padding: 0
+        margin: 0
+        list-style-type: none
+
+        li
+            clear: both
+            height: 40px
+            padding: 0
+            text-align: center
+            margin: 0px
+
+            a
+                background: none
+                font-size: 18px
+                color: #333
+                text-decoration: none
+                padding: 10px 0
+                border: none
+
+            a:hover
+                background: #DBF1AD
+                font-size: 18px
+                color: #333
+                border: none
