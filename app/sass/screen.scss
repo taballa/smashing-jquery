@@ -3,9 +3,9 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-// @import "compass/reset";
 $legacy-support-for-ie6 : true;
 @import "normalize";
+// @import "compass/reset";
 
 @import "compass/css3";
 
@@ -13,3 +13,4 @@ $legacy-support-for-ie6 : true;
 @import "layout";
 @import "table";
 @import "drop_down_menu";
+@import "accordion";

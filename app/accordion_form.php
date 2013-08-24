@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Accordion Form</title>
-    <link rel="stylesheet" href="stylesheets/screen.css">
+    <?php require "header.php" ?>
 </head>
 <body>
     <h1>Accordion Form</h1>
