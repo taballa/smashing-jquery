@@ -13,32 +13,30 @@
             <span></span>
         </div>
         <ul class="accordion-content">
-            <li>
-                <a href="#">Business</a>
-                <a href="#">Education</a>
-                <a href="#">Tech</a>
-                <a href="#">Romance</a>
-            </li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Tech</a></li>
+            <li><a href="#">Romance</a></li>
         </ul>
         <div class="accordion-header">
             <h3>Electronics</h3>
             <span></span>
         </div>
         <ul class="accordion-content">
-            <li href="#">Audio</li>
-            <li href="#">Video</li>
-            <li href="#">Automobile</li>
-            <li href="#">Appliances</li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Automobile</a></li>
+            <li><a href="#">Appliances</a></li>
         </ul>
         <div class="accordion-header">
             <h3>Sporting Goods</h3>
             <span></span>
         </div>
         <ul class="accordion-content">
-            <li href="#">Baseball</li>
-            <li href="#">Basketball</li>
-            <li href="#">Football</li>
-            <li href="#">Tennis</li>
+            <li><a href="#">Baseball</a></li>
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Football</a></li>
+            <li><a href="#">Tennis</a></li>
         </ul>
     </div>
     <?php require 'footer.php' ?>
