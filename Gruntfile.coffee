@@ -3,11 +3,15 @@ module.exports = (grunt) ->
     grunt.initConfig
         watch:
             options:
-                files: ['app/scripts/*.coffee', 'app/sass/*.sass', 'app/sass/*.scss', 'app/*.html', 'app/*.php']
                 livereload: true
             scripts:
-                files: ['app/scripts/*.coffee', 'app/sass/*.sass', 'app/sass/*.scss']
-                tasks: ['compass', 'coffee']
+                files: ['app/scripts/*.coffee']
+                tasks: ['coffee']
+            styles:
+                files: ['app/sass/*.sass', 'app/sass/*.scss']
+                tasks: ['compass']
+            another:
+                files: ['app/*html', 'app/*.php']
 
         compass:
             dist:
