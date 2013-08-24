@@ -9,3 +9,4 @@ vendor
 .svn
 app/stylesheets
 app/scripts/*.js
+.tmp
