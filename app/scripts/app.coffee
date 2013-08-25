@@ -1,1 +1,1 @@
-require(['modernizr', 'drop-down-menu', 'accordion'])
+require(['modernizr', 'drop-down-menu', 'accordion', 'tabs'])
