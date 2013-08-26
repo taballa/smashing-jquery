@@ -10,7 +10,6 @@
     <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h3>livereload test 219</h3>
     <div id="container">
         <table  class="overview">
             <caption>Company X webhosting products overview</caption>
