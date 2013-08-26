@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="container">
-        <table  class="overview">
+        <table  class="overview blue-theme">
             <caption>Company X webhosting products overview</caption>
             <thead>
                 <tr>
