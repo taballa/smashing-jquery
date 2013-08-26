@@ -21,7 +21,7 @@
             <li><a href="qTip-example.html">qTip-example</a></li>
             <li><a href="select-all-the-checkbox.html">select-all-the-checkbox</a></li>
             <li><a href="validate-form.html">validate-form</a></li>
-            <li><a href="selector.html">selector</a></li>
+            <li><a href="selector.php">selector</a></li>
         </ul>
         <dl>
             <dt>jQuery 应用</dt>
@@ -30,6 +30,7 @@
             <dd><a href="drop-down-menu.php">Drop down menu （下拉菜单）</a></dd>
             <dd><a href="accordion_form.php">Accordion From</a></dd>
             <dd><a href="tabs_page.php">Tabs Page</a></dd>
+            <dd><a href="table.php">Table Page</a></dd>
         </dl>
     </div>
     <script src="scripts/vendor/requirejs/require.js"></script>
