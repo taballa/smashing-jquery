@@ -10,3 +10,4 @@ vendor
 app/stylesheets
 app/scripts/*.js
 .tmp
+.Gemfile.lock
