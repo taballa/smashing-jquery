@@ -5,9 +5,9 @@
     <title>jQuery filter</title>
     <link rel="stylesheet" href="stylesheets/screen.css">
     <!--[if IE]>
-        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
-    <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h3>livereload test 219</h3>
@@ -40,7 +40,7 @@
             </tfoot>
             <tbody>
                 <!-- TODO: Use the PHP output cell again and again -->
-                <?php 
+                <?php
                 for ($i=0; $i<15; $i++)
                 {
                     echo "
