@@ -1,0 +1,46 @@
+.clearfix
+    @include clearfix
+
+body.tabs
+    background-color: #8CCAD9
+
+ul#tabs
+    list-style-type: none
+    position: relative
+    margin: 0
+
+    li
+        float: left
+        width: 155px
+        text-align: center
+        position: relative
+        margin: 0 3px
+        position: relative
+
+        a.tab-active
+            color: green
+            background: #fff
+            position: relative
+            top: 1px
+
+        $border: 1px solid #9B4C24
+        a
+            border-top: $border
+            border-left: $border
+            border-right: $border
+            background: #2e7d91
+            padding: 10px 5px 10px 0
+            display: block
+            text-decoration: none
+            font: bold 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif
+            color: #fff
+            position: relative
+
+#content-container
+    border: 1px solid #333
+    background: #fff
+
+.content
+    display: none
+
+

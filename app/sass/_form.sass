@@ -1,31 +1,32 @@
-p
-    margin: 10px 0
-input
-    padding: 5px
-input.default
-    color: #828282
-
-// form the example
-@mixin momomo
-    display: block 
-$space : 10px
-#form-example, #form-example-2
+#validate-form
+    p
+        margin: 10px 0
     input
+        padding: 5px
+    input.default
+        color: #828282
+
+    // form the example
+    @mixin momomo
         display: block
-    label
-        display: block
-        margin-top: $space
-    .submit
-        margin-top: $space
-    
+    $space : 10px
+    #form-example, #form-example-2
+        input
+            display: block
+        label
+            display: block
+            margin-top: $space
+        .submit
+            margin-top: $space
 
-.disable
-    background: #DFDFDF
 
-.highlight
-    background: yellow
-    padding: 5px
+    .disable
+        background: #DFDFDF
 
-.left-box, .right-box
-    width: 400px
-    float: left
+    .highlight
+        background: yellow
+        padding: 5px
+
+    .left-box, .right-box
+        width: 400px
+        float: left

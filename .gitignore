@@ -4,4 +4,10 @@ node_modules
 components
 vendor
 *.orig
+.tags
+.tags_sorted_by_file
+.svn
+app/stylesheets
 app/scripts/*.js
+.tmp
+.Gemfile.lock
