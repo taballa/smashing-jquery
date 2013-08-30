@@ -4,3 +4,4 @@ node_modules
 components
 vendor
 *.orig
+app/scripts/*.js
