@@ -17,6 +17,7 @@
     "google-code-prettify": "~1.0.0",
     "require-css": "~0.0.7",
     "modernizr": "~2.6.2",
-    "html5shiv": "~3.6.2"
+    "html5shiv": "~3.6.2",
+    "jquery.tablesorter": "~2.10.8"
   }
 }
