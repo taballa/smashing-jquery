@@ -33,11 +33,6 @@
             <dd><a href="table.php">Table Page</a></dd>
         </dl>
     </div>
-    <script src="scripts/vendor/requirejs/require.js"></script>
-    <script>
-        require(['scripts/common'], function(){
-            require(['index']);
-        })
-    </script>
+    <?php require "footer.php" ?>
 </body>
 </html>

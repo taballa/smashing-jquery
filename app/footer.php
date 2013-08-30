@@ -2,9 +2,9 @@
 <script src="scripts/vendor/requirejs/require.js"></script>
 <!-- endbuild -->
 
-<!-- build:js scripts/optimized.js -->
+<!-- build:js scripts/app.js -->
 <script>
-    require(['scripts/common'], function(){
+    require(['scripts/config'], function(){
         require(['app']);
     })
 </script>

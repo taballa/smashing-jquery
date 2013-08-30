@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Drop down menu</title>
-    <link rel="stylesheet" href="stylesheets/screen.css">
+    <?php require "header.php" ?>
 </head>
 <body>
     <div class="container">
@@ -77,13 +77,6 @@
 济南中院正通过其在人民微博的官方微博播报案件审理情况。</p>
         </div>
     </div>
-
-
-    <script src="scripts/vendor/requirejs/require.js"></script>
-    <script>
-        require(['scripts/common'], function(){
-            require(['app']);
-        })
-    </script>
+<?php require "footer.php" ?>
 </body>
 </html>

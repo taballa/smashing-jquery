@@ -1,15 +1,11 @@
 <?php
 $script = "
-require(['scripts/common'], function(){
-    require(['jquery','prettify'], function($){
-        prettyPrint();
-        var path = location.pathname;
-        pathArray = path.split('/');
-        for (var i = 0; i < pathArray.length; i++) {
-            $(\"#menu a[href*='\"+pathArray[i]+\"']\").addClass('selected');
-        };
-    })
-});
+prettyPrint();
+var path = location.pathname;
+pathArray = path.split('/');
+for (var i = 0; i < pathArray.length; i++) {
+    $(\"#menu a[href*='\"+pathArray[i]+\"']\").addClass('selected');
+};
 ";
 
  ?>
@@ -18,7 +14,7 @@ require(['scripts/common'], function(){
 <head>
     <meta charset="UTF-8">
     <title>Highlight current menu</title>
-    <link rel="stylesheet" href="stylesheets/screen.css">
+    <?php require "header.php" ?>
     <style>
         .selected {
             color: #FF0000;
@@ -50,9 +46,6 @@ require(['scripts/common'], function(){
     <h4>CODE:</h4>
     <pre class="prettyprint lang-js"><?php echo "$script"; ?></pre>
 
-    <script src="scripts/vendor/requirejs/require.js"></script>
-    <script>
-        <?php echo "$script"; ?>
-    </script>
+    <?php require "footer.php" ?>
 </body>
 </html>

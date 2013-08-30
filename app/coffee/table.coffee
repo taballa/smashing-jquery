@@ -1,4 +1,4 @@
-define ['jquery','qTip'], ($)->
+define ['jquery','qTip', 'tablesorter'], ($)->
     $('.blue-theme tbody tr:even').addClass 'even'
 
     $('.blue-theme tbody tr').hover ->
@@ -61,3 +61,5 @@ define ['jquery','qTip'], ($)->
         # $('table#product tbody tr').css('opacity', '0.0').hide().slice(startItem, endItem).css('display', 'table-row').animate({opacity: 1}, 300)
         $('table#product tbody tr').hide().slice(startItem, endItem).show()
     )
+
+    $('table#product').tablesorter()

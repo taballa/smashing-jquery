@@ -6,19 +6,24 @@ module.exports = (grunt) ->
                 livereload: true
             scripts:
                 files: ['app/coffee/*.coffee']
-                tasks: ['coffee']
+                tasks: ['clean:scripts', 'coffee']
             styles:
                 files: ['app/sass/*.sass', 'app/sass/*.scss']
-                tasks: ['compass']
+                tasks: ['compass:watch']
             another:
                 files: ['app/*html', 'app/*.php']
 
         compass:
-            option:
+            watch:
                 config: 'config.rb'
+            build:
+                options:
+                    config: 'config.rb'
+                    cssDir: 'build/static/styles/'
+                    outputStyle: 'compressed'
 
         coffee:
-            glob_to_multiple:
+            compile:
                 expand: true
                 flatten: true
                 cwd: 'app/coffee/'
@@ -27,15 +32,49 @@ module.exports = (grunt) ->
                 ext: '.js'
 
         requirejs:
-            compile:
+            scripts:
                 options:
+                    mainConfigFile: 'app/scripts/config.js'
                     baseUrl: 'app/scripts'
                     name: 'app'
-                    mainConfigFile: 'app/scripts/common.js'
-                    out: 'build/static/scripts/optimized.js'
-        clean:
-            ['build']
+                    out: 'build/static/scripts/app.js'
+                    # dir: 'build/static/scripts/'
+                    # modules: [
+                    #   name: 'app'
+                    #   separateCSS: true
+                    #   create: true
+                    #   include:[
+                    #     'app'
+                    #   ]
+                    # ,
+                    #   name: 'ajax'
+                    #   exclude:[
+                    #     'common'
+                    #   ]
+                    # ]
+            css:
+                options:
+                    optimizeCss: 'standard'
+                    cssIn: 'app/stylesheets/screen.css'
+                    out: 'build/static/styles/screen.css'
 
+        usemin:
+            options:
+                dirs: ['build/static']
+            html: ['build/static/*.{php,html}']
+            # html: ['build/static/{footer,header}.php']
+            # css: ['build/static/styles/*.css']
+
+        # useminPrepare 未正式使用，可以执行 grunt useminPrepare 看效果。
+        useminPrepare:
+            options:
+                dest: 'build/static/scripts/'
+            html: 'app/usemin-test.html'
+        clean:
+            build:
+                ['build', '.tmp/build']
+            scripts:
+                ['app/scripts/*.js']
         copy:
             main:
                 files:[
@@ -44,38 +83,33 @@ module.exports = (grunt) ->
                     cwd: 'app'
                     src: ['*.{html,php}']
                 ,
-                    expand: true
-                    dest: 'build/static/styles'
-                    cwd: 'app/stylesheets/'
-                    src: ['**/*.css']
-                ,
+                #     expand: true
+                #     dest: 'build/static/styles'
+                #     cwd: 'app/stylesheets/'
+                #     src: ['**/*.css']
+                # ,
                     expand: true
                     dest: 'build/static/images'
                     cwd: 'app/images/'
                     src: ['**/*.{png,gif,jpg}']
                 ]
-        usemin:
-            # options:
-            #     dirs: ['build/static/']
-            html: ['build/static/*.html', 'build/static/*.php']
-            css: ['build/static/styles/*.css']
 
         uglify:
             dist:
                 files:
                     'build/static/scripts/require.js': ['app/scripts/vendor/requirejs/require.js']
 
-
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-compass')
     grunt.loadNpmTasks('grunt-contrib-requirejs')
+    # grunt.loadNpmTasks('grunt-requirejs')
     grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-usemin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
 
     grunt.registerTask('default', ['watch'])
-    grunt.registerTask('build', ['clean', 'requirejs', 'coffee', 'compass', 'copy', 'usemin', 'uglify'])
+    grunt.registerTask('build', ['clean:build', 'coffee', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
 
 

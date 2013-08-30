@@ -13,9 +13,9 @@ require.config
       'qTip': ['jquery', 'jquery-migrate']
       'qTip2': ['jquery', 'jquery-migrate']
       'validate': ['jquery']
-      # 'prettify': ['css!vendor/google-code-prettify/styles/sunburst']
+      'prettify': ['jquery', 'css!vendor/google-code-prettify/styles/sunburst']
       'tablesorter': ['jquery']
     map:
       '*': {
-        'css': 'vendor/require-css/css'
+        css: 'vendor/require-css/css'
       }
