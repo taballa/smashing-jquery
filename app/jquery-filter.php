@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="stylesheets/screen.css">
 </head>
 <body>
-    <h3>test livereload 205</h3>
+    <h3>test livereload 207</h3>
     <div id="container">
-        <table  class="overview">
+        <table  class="overview scheme-2">
             <caption>Company X webhosting products overview</caption>
             <thead>
                 <tr>
