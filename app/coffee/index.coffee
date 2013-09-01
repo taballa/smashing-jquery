@@ -1,2 +1,2 @@
 require ['jquery', 'modernizr'], ($) ->
-    $('a').attr 'target', '_blank'
+    $('#menu a').attr 'target', '_blank'

@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery filter</title>
-    <link rel="stylesheet" href="stylesheets/screen.css">
-    <!--[if IE]>
-        <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
-    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <?php require "header.php" ?>
 </head>
 <body>
     <div id="container">
-        <table  class="overview blue-theme">
+        <table  class="overview blue-theme" id="company-x">
             <caption>Company X webhosting products overview</caption>
             <thead>
                 <tr>
@@ -59,11 +55,6 @@
             </tbody>
         </table>
     </div>
-    <script src="scripts/vendor/requirejs/require.js"></script>
-    <script>
-    require(['scripts/common'], function(){
-        require(['filter'])
-    })
-    </script>
+    <?php require "footer.php" ?>
 </body>
 </html>

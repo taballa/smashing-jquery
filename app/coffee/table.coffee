@@ -62,4 +62,7 @@ define ['jquery','qTip', 'tablesorter'], ($)->
         $('table#product tbody tr').hide().slice(startItem, endItem).show()
     )
 
-    $('table#product').tablesorter()
+    $('table#product').tablesorter
+        sortList: [
+            [1,0]
+        ]

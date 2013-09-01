@@ -1,6 +1,7 @@
 # NOTE: 完全不理解，为什么要这样定义？ 官网还有专门的解释：http://requirejs.org/docs/errors.html#notloaded
 define (require) ->
     $ = require 'jquery' # 之前写错了 require ['jquery'] 报错：Error: Module name "tr" has not been loaded yet for context: _
+    tablesorter = require 'tablesorter'
     color = ''
     $('tbody tr').on('mouseover', ->
         color = $(this).css('background-color')
@@ -19,3 +20,8 @@ define (require) ->
     $('tbody tr:odd').addClass('odd')
 
 # TODO: 数字标题栏浮动
+
+    $('#company-x').tablesorter
+        sortList: [
+            [2, 1]
+        ]
