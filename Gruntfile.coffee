@@ -26,10 +26,19 @@ module.exports = (grunt) ->
                 dest: 'app/scripts/'
                 ext: '.js'
 
+        connect:
+            server:
+                option:
+                    prot: 9001
+                    base: 'app'
+                    open: true
+
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-compass')
 
     grunt.registerTask('default', ['watch'])
+
+    grunt.registerTask('server', ['connect'])
 
 
