@@ -32,14 +32,14 @@ module.exports = (grunt) ->
                     port: 9001
                     base: 'app'
                     open: true
-                    keepalive: true
+                    # keepalive: true
 
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-compass')
     grunt.loadNpmTasks('grunt-contrib-connect')
 
-    grunt.registerTask('default', ['watch'])
+    grunt.registerTask('default', ['connect', 'watch'])
 
     grunt.registerTask('server', ['connect'])
 
