@@ -98,6 +98,13 @@ module.exports = (grunt) ->
             dist:
                 files:
                     'build/static/scripts/require.js': ['app/scripts/vendor/requirejs/require.js']
+        connect:
+            server:
+                options:
+                    port: 9001
+                    base: 'app'
+                    open: true
+                    # keepalive: true
 
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-coffee')
@@ -108,8 +115,11 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-usemin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
+    grunt.loadNpmTasks('grunt-contrib-connect')
 
     grunt.registerTask('default', ['watch'])
     grunt.registerTask('build', ['clean:build', 'coffee', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
+
+    grunt.registerTask('server', ['connect', 'watch'])
 
 
