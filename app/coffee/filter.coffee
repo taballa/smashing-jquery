@@ -3,7 +3,7 @@ define (require) ->
     $ = require 'jquery' # 之前写错了 require ['jquery'] 报错：Error: Module name "tr" has not been loaded yet for context: _
     tablesorter = require 'tablesorter'
     color = ''
-    $('tbody tr').on('mouseover', ->
+    $('#company-x tbody tr').on('mouseover', ->
         color = $(this).css('background-color')
         $(this).css('background': '#ECFBD4')
     ).on 'mouseout', ->
