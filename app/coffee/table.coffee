@@ -1,18 +1,18 @@
 define ['jquery','qTip', 'tablesorter'], ($)->
-    $('.blue-theme tbody tr:even').addClass 'even'
+    $('table#product tbody tr:even').addClass 'even'
 
-    $('.blue-theme tbody tr').hover ->
+    $('table#product tbody tr').hover ->
         $(this).css('background', 'pink')
     , ->
        $(this).css('background', '')
 
     # Edit Me
-    # $('.blue-theme tbody td').hover ->
+    # $('table#product tbody td').hover ->
     #     $(this).append('<div class="editme"><a href="">Edit Me</a></div>')
     # , ->
     #     $('.editme').remove()
     # qTip 显示提示
-    $('.blue-theme tbody tr').qtip
+    $('table#product tbody tr').qtip
         content:
             '<a href="#">Edit Me</a>'
         show:
