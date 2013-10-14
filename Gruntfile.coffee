@@ -12,6 +12,12 @@ module.exports = (grunt) ->
                 tasks: ['compass:watch']
             another:
                 files: ['app/*html', 'app/*.php']
+            express:
+                files: ['app/*.js', "app/*.coffee"]
+                tasks: ['express:dev']
+                options:
+                    nospawn: true
+
 
         compass:
             watch:
@@ -106,6 +112,21 @@ module.exports = (grunt) ->
                     open: true
                     # keepalive: true
 
+        express:
+            options: {
+            # Override defaults here
+            }
+            dev:
+                options:
+                   script: "app/app.js"
+            prod:
+                options:
+                   script: "app/app.js"
+                   node_env: "production"
+            test:
+                options:
+                   script: "app/app.js"
+
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-compass')
@@ -115,9 +136,10 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-usemin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-connect')
+    grunt.loadNpmTasks('grunt-express-server')
 
     grunt.registerTask('build', ['clean:build', 'coffee', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
     grunt.registerTask('default', ['connect', 'watch'])
-
+    grunt.registerTask('server', ['express:dev', 'watch'])
 
 
