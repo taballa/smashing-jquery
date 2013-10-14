@@ -110,16 +110,14 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-coffee')
     grunt.loadNpmTasks('grunt-contrib-compass')
     grunt.loadNpmTasks('grunt-contrib-requirejs')
-    # grunt.loadNpmTasks('grunt-requirejs')
     grunt.loadNpmTasks('grunt-contrib-clean')
     grunt.loadNpmTasks('grunt-contrib-copy')
     grunt.loadNpmTasks('grunt-usemin')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-connect')
 
-    grunt.registerTask('default', ['watch'])
     grunt.registerTask('build', ['clean:build', 'coffee', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
+    grunt.registerTask('default', ['connect', 'watch'])
 
-    grunt.registerTask('server', ['connect', 'watch'])
 
 
