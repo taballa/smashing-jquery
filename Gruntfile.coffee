@@ -18,7 +18,6 @@ module.exports = (grunt) ->
                 options:
                     nospawn: true
 
-
         compass:
             watch:
                 config: 'config.rb'
@@ -139,7 +138,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-express-server')
 
     grunt.registerTask('build', ['clean:build', 'coffee', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
-    grunt.registerTask('default', ['connect', 'watch'])
+    grunt.registerTask('default', ['watch'])
     grunt.registerTask('server', ['express:dev', 'watch'])
 
 
