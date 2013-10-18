@@ -2,8 +2,10 @@ express = require 'express'
 http = require 'http'
 app = express()
 
+app.use(express.logger())
+
 app.set('views', __dirname + '/views')
-app.set('views engine', 'jade')
+app.set('view engine', 'jade')
 
 app.all '*', (req, res, next)->
     # res.setHeader(404, {'Content-Type': 'text/plain'})

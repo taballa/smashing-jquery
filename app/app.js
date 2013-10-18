@@ -8,9 +8,11 @@
 
   app = express();
 
+  app.use(express.logger());
+
   app.set('views', __dirname + '/views');
 
-  app.set('views engine', 'jade');
+  app.set('view engine', 'jade');
 
   app.all('*', function(req, res, next) {
     return next();
