@@ -1,6 +1,7 @@
 express = require 'express'
-http = require 'http'
 app = express()
+http = require 'http'
+swig = require 'swig'
 
 app.set('views', __dirname + '/views')
 app.set('views engine', 'jade')
