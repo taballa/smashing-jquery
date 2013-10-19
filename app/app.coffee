@@ -4,9 +4,6 @@ http = require 'http'
 swig = require 'swig'
 
 
-app.use(express.logger())
-
-
 app.engine('html', swig.renderFile)
 app.set('views', __dirname + '/views')
 # app.set('view engine', 'jade')

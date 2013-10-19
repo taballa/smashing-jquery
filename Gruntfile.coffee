@@ -13,7 +13,7 @@ module.exports = (grunt) ->
             another:
                 files: ['app/*html', 'app/*.php']
             express:
-                files: ['app/*.js', "app/*.coffee"]
+                files: ['app/*.js', "app/*.coffee", "app/views/*.html", "app/views/*.jade"]
                 tasks: ['express:dev']
                 options:
                     nospawn: true
