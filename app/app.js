@@ -10,9 +10,13 @@
 
   swig = require('swig');
 
+  app.engine('html', swig.renderFile);
+
   app.set('views', __dirname + '/views');
 
-  app.set('views engine', 'jade');
+  app.set('view engine', 'html');
+
+  app.set('view cache', false);
 
   app.all('*', function(req, res, next) {
     return next();

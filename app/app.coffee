@@ -3,8 +3,13 @@ app = express()
 http = require 'http'
 swig = require 'swig'
 
+
+app.engine('html', swig.renderFile)
 app.set('views', __dirname + '/views')
-app.set('views engine', 'jade')
+# app.set('view engine', 'jade')
+app.set('view engine', 'html')
+app.set('view cache', false)
+
 
 app.all '*', (req, res, next)->
     # res.setHeader(404, {'Content-Type': 'text/plain'})

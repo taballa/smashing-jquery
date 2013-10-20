@@ -6,14 +6,17 @@ module.exports = (grunt) ->
                 livereload: true
             scripts:
                 files: ['app/coffee/*.coffee']
-                tasks: ['clean:scripts', 'coffee']
+                tasks: ['clean:scripts', 'coffee:scripts']
+            app:
+                files: ['app/app.coffee']
+                tasks: ['coffee:app']
             styles:
                 files: ['app/sass/*.sass', 'app/sass/*.scss']
                 tasks: ['compass:watch']
             another:
                 files: ['app/*html', 'app/*.php']
             express:
-                files: ['app/*.js', "app/*.coffee"]
+                files: ["app/*.coffee", "app/views/*.html", "app/views/*.jade"]
                 tasks: ['express:dev']
                 options:
                     nospawn: true
@@ -28,12 +31,19 @@ module.exports = (grunt) ->
                     outputStyle: 'compressed'
 
         coffee:
-            compile:
+            scripts:
                 expand: true
                 flatten: true
                 cwd: 'app/coffee/'
                 src: ['*.coffee']
                 dest: 'app/scripts/'
+                ext: '.js'
+            app:
+                expand: true
+                flatten: true
+                cwd: 'app/'
+                src: ['app.coffee']
+                dest: 'app/'
                 ext: '.js'
 
         requirejs:
@@ -137,8 +147,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-contrib-connect')
     grunt.loadNpmTasks('grunt-express-server')
 
-    grunt.registerTask('build', ['clean:build', 'coffee', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
+    grunt.registerTask('build', ['clean:build', 'coffee:scripts', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
     grunt.registerTask('default', ['watch'])
     grunt.registerTask('server', ['express:dev', 'watch'])
-
 
