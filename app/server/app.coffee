@@ -22,7 +22,7 @@ app.get('/about', (req, res)->
     res.end 'Welcome to the about page.'
     )
 app.get('/server', (req, res)->
-    res.render('server')
+    res.render('server', {message: 'hi I\'m server'})
     )
 app.get '*', (req, res)->
     res.end '404!'
