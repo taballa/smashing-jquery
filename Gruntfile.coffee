@@ -151,5 +151,5 @@ module.exports = (grunt) ->
 
     grunt.registerTask('build', ['clean:build', 'coffee:scripts', 'compass:build', 'copy', 'requirejs', 'usemin', 'uglify'])
     grunt.registerTask('default', ['watch'])
-    grunt.registerTask('server', ['express:dev', 'watch'])
+    grunt.registerTask('server', ['coffee:server', 'coffee:scripts', 'express:dev', 'watch'])
 
