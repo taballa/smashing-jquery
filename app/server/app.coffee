@@ -16,10 +16,13 @@ app.all '*', (req, res, next)->
     next()
 
 app.get('/', (req, res)->
-    res.render('index', {message: 'I love express.'})
+    res.render('index', {message: 'I love dog.'})
     )
 app.get('/about', (req, res)->
     res.end 'Welcome to the about page.'
+    )
+app.get('/server', (req, res)->
+    res.render('server', {message: 'hi I\'m server'})
     )
 app.get '*', (req, res)->
     res.end '404!'

@@ -7,16 +7,16 @@ module.exports = (grunt) ->
             scripts:
                 files: ['app/coffee/*.coffee']
                 tasks: ['clean:scripts', 'coffee:scripts']
-            app:
-                files: ['app/app.coffee']
-                tasks: ['coffee:app']
+            server:
+                files: ['app/server/*.coffee']
+                tasks: ['clean:server', 'coffee:server']
             styles:
                 files: ['app/sass/*.sass', 'app/sass/*.scss']
                 tasks: ['compass:watch']
             another:
                 files: ['app/*html', 'app/*.php']
             express:
-                files: ["app/*.coffee", "app/views/*.html", "app/views/*.jade"]
+                files: ['app/server/*.js', "app/server/*.coffee", "app/server/views/*.html", "app/server/views/*.jade"]
                 tasks: ['express:dev']
                 options:
                     nospawn: true
@@ -38,12 +38,12 @@ module.exports = (grunt) ->
                 src: ['*.coffee']
                 dest: 'app/scripts/'
                 ext: '.js'
-            app:
+            server:
                 expand: true
                 flatten: true
-                cwd: 'app/'
-                src: ['app.coffee']
-                dest: 'app/'
+                cwd: 'app/server/'
+                src: ['*.coffee']
+                dest: 'app/server/'
                 ext: '.js'
 
         requirejs:
@@ -90,6 +90,8 @@ module.exports = (grunt) ->
                 ['build', '.tmp/build']
             scripts:
                 ['app/scripts/*.js']
+            server:
+                ['app/server/*.js']
         copy:
             main:
                 files:[
@@ -127,14 +129,14 @@ module.exports = (grunt) ->
             }
             dev:
                 options:
-                   script: "app/app.js"
-            prod:
-                options:
-                   script: "app/app.js"
-                   node_env: "production"
-            test:
-                options:
-                   script: "app/app.js"
+                   script: "app/server/app.js"
+            # prod:
+            #     options:
+            #        script: "app/app.js"
+            #        node_env: "production"
+            # test:
+            #     options:
+            #        script: "app/app.js"
 
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-contrib-coffee')
