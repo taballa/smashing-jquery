@@ -16,7 +16,7 @@ app.all '*', (req, res, next)->
     next()
 
 app.get('/', (req, res)->
-    res.render('index', {message: 'I love movie.'})
+    res.render('index', {message: 'I love express.'})
     )
 app.get('/about', (req, res)->
     res.end 'Welcome to the about page.'
