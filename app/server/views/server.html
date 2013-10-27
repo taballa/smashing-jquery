@@ -1,2 +1,10 @@
 {% extends 'layout.html' %}
 {% block title %}server title{% endblock %}
+{% block content %}
+模仿Twig 看看Twig上的功能和Swig上的是否完全一致
+\{\{\}\} 表示变量
+\{\% \%\} 表示function
+{% endblock %}
+{% block temp %}
+这个模块不会显示，因为 extends 'layout.html', "layout.html" 内没有 temp 模块
+{% endblock %}
