@@ -1,10 +1,16 @@
 {% extends 'layout.html' %}
 {% block title %}server title{% endblock %}
+
 {% block content %}
-模仿Twig 看看Twig上的功能和Swig上的是否完全一致
-\{\{\}\} 表示变量
-\{\% \%\} 表示function
+    模仿Twig 看看Twig上的功能和Swig上的是否完全一致
+    \{\{\}\} 表示变量
+    \{\% \%\} 表示function
+    {{ "'message' = " + message | striptags | title }}{{ message }}{{message}}
+    {% filter upper %}This is becomes uppercase{% endfilter %}
 {% endblock %}
+
 {% block temp %}
 这个模块不会显示，因为 extends 'layout.html', "layout.html" 内没有 temp 模块
 {% endblock %}
+
+{% set message = "set variable: set 关键字可以使用" %}
