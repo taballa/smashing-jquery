@@ -1,12 +1,14 @@
 {% extends 'layout.html' %}
-{% block title %}server title{% endblock %}
+{% block title %}server page title{% endblock %}
 
 {% block content %}
-    模仿Twig 看看Twig上的功能和Swig上的是否完全一致
-    \{\{\}\} 表示变量
-    \{\% \%\} 表示function
-    {{ "'message' = " + message | striptags | title }}{{ message }}{{message}}
-    {% filter upper %}This is becomes uppercase{% endfilter %}
+    <h1>模仿Twig 看看Twig上的功能和Swig上的是否完全一致</h1>
+    <h4>Twig 功能列表</h4>
+    <ul>
+        <li>\{\{\}\} 表示变量 \{\% \%\} 表示function (怎么只显示{}去掉\）</li>
+        <li>filter | , striptags , title: {{ "'message' = " + message | striptags | title }}{{ message }}{{message}}</li>
+        <li>filter upper: {% filter upper %}This is becomes uppercase{% endfilter %}</li>
+    </ul>
 {% endblock %}
 
 {% block temp %}
